@@ -19,8 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include("social.urls")), # for rest in social endpoints 
-    path('sso/', include("socialAuth.urls")), # for auth
+    path('api/auth/', include('socialAuth.urls')),
+    path('api/social/', include('social.urls')),
 
 
 
